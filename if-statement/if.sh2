@@ -1,0 +1,9 @@
+#!/bin/bash
+
+grade=85
+
+if [ $grade -ge 90 ] && [ $grade -le 100 ]
+# This code block will not execute because only one of the conditions is met. Both conditions must be met for the code to execute.
+then
+echo "Excellent"
+fi

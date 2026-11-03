@@ -1,0 +1,40 @@
+#!/bin/bash
+# Tells the computer to use the Bash shell.
+# Note: It must be /bin/bash, not /bin bash.
+
+greet() {
+# Defines a function named greet.
+
+    local name
+    # Creates a local variable named name to store the person's name.
+
+    if [ $# -eq 0 ]; then
+    # Checks whether zero arguments were passed to the function.
+    # $# counts the arguments.
+    # -eq means "equal to".
+    # -eq 0 means no arguments were provided.
+    # Note: Use -eq, not -eg.
+
+        echo "What is your name?"
+        # Displays a question asking the user for their name.
+
+        read name
+        # Waits for the user to type their name and press Enter.
+        # Stores the typed name in the variable name.
+
+    else
+    # Runs this section if at least one argument was provided.
+
+        name="$1"
+        # Stores the first argument in the variable name.
+
+    fi
+    # Ends the if/else conditional statement.
+
+    echo "Hello, $name"
+    # Prints Hello followed by the name stored in the variable.
+
+}
+# Marks the end of the greet function.
+
+greet
